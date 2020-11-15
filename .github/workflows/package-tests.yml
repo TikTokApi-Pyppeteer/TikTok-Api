@@ -5,6 +5,7 @@ on:
       - main
       - master
   pull_request:
+    branches:
       - master
   release:
     types:
