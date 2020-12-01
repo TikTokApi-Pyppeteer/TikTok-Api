@@ -3,6 +3,11 @@
 
 [PLAYWRIGHT VERSION](https://github.com/davidteather/TikTok-Api)
 
+If you're having issues w/playwright use selenium on the playwright version
+```
+TikTokApi.get_instance(use_selenium=True)
+```
+
 This is an unofficial api wrapper for TikTok.com in python. With this api you are able to call most trending and fetch specific user information as well as much more.
 
  [![GitHub release (latest by date)](https://img.shields.io/github/v/release/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer)](https://github.com/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer/releases) [![Build Status](https://travis-ci.com/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer.svg?branch=master)](https://travis-ci.com/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer) [![GitHub](https://img.shields.io/github/license/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer)](https://github.com/TikTokApi-Pyppeteer/TikTok-Api-Pyppeteer/blob/master/LICENSE) [![Downloads](https://pepy.tech/badge/tiktokapi-pyppeteer)](https://pypi.org/project/TikTokApi/) ![](https://visitor-badge.laobi.icu/badge?page_id=davidteather.TikTok-Api)
