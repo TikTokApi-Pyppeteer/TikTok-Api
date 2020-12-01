@@ -58,6 +58,14 @@ class TikTokApi:
 
         self.request_delay = kwargs.get("request_delay", None)
 
+
+    @classmethod
+    def get_instance(cls,**kwargs):
+        #since I don't know if we need a singleton with pyppeteer
+        #return a new instance like we always did
+        return cls(**kwargs)
+
+
     def external_signer(self, url, custom_did=None):
         if custom_did != None:
             query = {
@@ -124,6 +132,7 @@ class TikTokApi:
                 "cookie": "tt_webid_v2=" + did + ';s_v_web_id=' + kwargs.get("custom_verifyFp", "verify_khgp4f49_V12d4mRX_MdCO_4Wzt_Ar0k_z4RCQC9pUDpX"),
             },
             proxies=self.__format_proxy(proxy),
+            verify=False
         )
         try:
             return r.json()
@@ -1000,7 +1009,7 @@ class TikTokApi:
             "Host": "www.tiktok.com",
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36",
             "Cookie": "s_v_web_id=" + kwargs.get("custom_verifyFp", "verify_khgp4f49_V12d4mRX_MdCO_4Wzt_Ar0k_z4RCQC9pUDpX"),
-        }, proxies=self.__format_proxy(kwargs.get("proxy", None)))
+        }, proxies=self.__format_proxy(kwargs.get("proxy", None)), verify=False)
 
         t = r.text
 
